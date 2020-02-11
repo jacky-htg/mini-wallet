@@ -32,6 +32,6 @@ Mini Wallet API using Golang and Postgresql
 - Open Postman 
 - Import mini-wallet.postman_collection.json 
 - Import mini-wallet.postman_environment.json
-- Get Token by POST /login
+- Get Token by POST /login . Username : rijalEwallet and Password : 12345678
 - Copy Token from response of POST /login to mini-wallet environment token
 - Test all Endpoint 
