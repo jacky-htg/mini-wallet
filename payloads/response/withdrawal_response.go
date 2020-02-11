@@ -11,7 +11,7 @@ type WithdrawalResponse struct {
 		CustomerID  string  `json:"withdrawn_by"`
 		Status      string  `json:"status"`
 		WithdrawnAt string  `json:"withdrawn_at"`
-		Amount      float64 `json:"balance"`
+		Amount      float64 `json:"amount"`
 		ReferenceID string  `json:"reference_id"`
 	} `json:"withdrawal"`
 }
