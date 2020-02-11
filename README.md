@@ -18,5 +18,18 @@ Mini Wallet API using Golang and Postgresql
 - go run main.go
 - Open http://localhost:8080/api/v1/health
 
+## Endpoint
+- GET /api/v1/health
+- POST /api/v1/login
+- POST /api/v1/init
+- GET /api/v1/wallet
+- POST /api/v1/wallet
+- PATCH /api/v1/wallet
+- POST /api/v1/wallet/deposits
+- POST /api/v1/wallet/withdrawals
+
 ## Testing
-- Open Postman and import mini-wallet.postman_collection.json and mini-wallet.postman_environment.json 
+- Open Postman 
+- Import mini-wallet.postman_collection.json 
+- Import mini-wallet.postman_environment.json
+- Test all Endpoint 
