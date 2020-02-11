@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "782e552c-ad34-468c-8432-07bd7fc7a776",
+		"name": "mini-wallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "rijalEwallet",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/init",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"customer_id\": \"a2b0639f-2cc6-44b8-b97b-15d69dbb511e\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/init",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"init"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/wallet",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/wallet",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/wallet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Token {{token}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/wallet",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/wallet/deposits",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Token {{token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "amount",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "reference_id",
+							"value": "50535246-dcb2-4929-8cc9-004ea06f5241",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/wallet/deposits",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"wallet",
+						"deposits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/wallet/withdrawals",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Token {{token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "amount",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "reference_id",
+							"value": "50535246-dcb2-4929-8cc9-004ea06f5241",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/wallet/withdrawals",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"wallet",
+						"withdrawals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/wallet",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Token {{token}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/wallet",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"wallet"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
