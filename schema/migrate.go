@@ -44,7 +44,7 @@ CREATE TABLE wallets (
 CREATE TABLE transactions (
 	transaction_id   	UUID,
 	wallet_id 			UUID NOT NULL,
-	reference_id		UUID NOT NULL,
+	reference_id		UUID NOT NULL UNIQUE,
 	status 				TEXT NOT NULL,
 	type 				CHAR(3) NOT NULL,
 	amount 				DOUBLE PRECISION NOT NULL,

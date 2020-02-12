@@ -24,8 +24,8 @@ type Transaction struct {
 // GetByReference : Get Transaction By Reference
 func (u *Transaction) GetByReference(ctx context.Context, db *sql.DB) error {
 	var isExist bool
-	const q string = `SELECT true FROM transactions WHERE type = $1 AND reference_id = $2 `
-	return db.QueryRowContext(ctx, q, u.Type, u.ReferenceID).Scan(&isExist)
+	const q string = `SELECT true FROM transactions WHERE reference_id = $1 `
+	return db.QueryRowContext(ctx, q, u.ReferenceID).Scan(&isExist)
 }
 
 // Save new transaction
